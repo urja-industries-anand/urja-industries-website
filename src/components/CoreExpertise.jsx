@@ -1,5 +1,5 @@
 import productsPhoto from '../assets/photos/products.jpeg'
-import buildingPhoto from '../assets/photos/urja_building.jpeg'
+import heatpumpPhoto from '../assets/photos/Commercial-hp.png'
 
 function HeatPumpIcon() {
   return (
@@ -29,17 +29,69 @@ function HeaterIcon() {
   )
 }
 
-function SolarIcon() {
+function ExpertiseCard({
+  title,
+  description,
+  photo,
+  photoAlt,
+  icon,
+  iconClassName,
+  details,
+}) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-    </svg>
+    <article
+      className="group h-80 [perspective:1000px] focus:outline-none"
+      tabIndex={0}
+      aria-label={`${title}. Click or touch this card to see more details.`}
+    >
+      <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)] motion-reduce:transition-none">
+        <div className="absolute inset-0 overflow-hidden rounded-lg border border-outline-variant bg-surface-container-low [backface-visibility:hidden]">
+          <img
+            src={photo}
+            alt={photoAlt}
+            className="h-48 w-full object-cover"
+          />
+          <div className="p-6">
+            <div className="flex items-center gap-3">
+              <span
+                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded ${iconClassName}`}
+              >
+                {icon}
+              </span>
+              <h3 className="font-heading text-lg font-600 text-on-surface">
+                {title}
+              </h3>
+            </div>
+            <p className="mt-3 font-technical text-xs uppercase tracking-[0.05em] text-on-surface-variant">
+              Touch for details
+            </p>
+          </div>
+        </div>
+
+        <div className="absolute inset-0 overflow-hidden rounded-lg border border-primary/30 bg-primary p-6 text-on-primary [backface-visibility:hidden] [transform:rotateY(180deg)] sm:p-8">
+          <div className="flex h-full flex-col">
+            <span className="flex h-10 w-10 items-center justify-center rounded bg-on-primary/15">
+              {icon}
+            </span>
+            <h3 className="mt-5 font-heading text-xl font-600">{title}</h3>
+            <p className="mt-3 font-body text-sm leading-6 text-on-primary/85">
+              {description}
+            </p>
+            <ul className="mt-5 space-y-2 border-t border-on-primary/20 pt-5">
+              {details.map((detail) => (
+                <li
+                  key={detail}
+                  className="flex gap-2 font-body text-sm leading-5 text-on-primary/90"
+                >
+                  <span aria-hidden="true">&bull;</span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
   )
 }
 
@@ -59,82 +111,33 @@ function CoreExpertise() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden">
-            <img
-              src={productsPhoto}
-              alt="Industrial heat pump equipment"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-6 sm:p-8">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="flex items-center justify-center w-9 h-9 rounded bg-primary text-on-primary">
-                  <HeatPumpIcon />
-                </span>
-                <h3 className="font-heading text-lg font-600 text-on-surface">
-                  Industrial Heat Pumps
-                </h3>
-              </div>
-              <p className="font-body text-sm leading-5 text-on-surface-variant">
-                High-COP systems designed for large-scale commercial heating
-                and cooling, maximizing energy recovery.
-              </p>
-            </div>
-          </div>
+          <ExpertiseCard
+            title="Heat Pumps"
+            description="High-COP systems designed for large-scale commercial heating and cooling, maximizing energy recovery."
+            photo={heatpumpPhoto}
+            photoAlt="Industrial heat pump equipment"
+            icon={<HeatPumpIcon />}
+            iconClassName="bg-primary text-on-primary"
+            details={[
+              'High-efficiency heat recovery',
+              'Optimized and efficient design',
+              'Scaleable upto large and complex applications',
+            ]}
+          />
 
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden">
-            <img
-              src={buildingPhoto}
-              alt="Heavy-duty industrial heaters"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-6 sm:p-8">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="flex items-center justify-center w-9 h-9 rounded bg-tertiary text-on-tertiary">
-                  <HeaterIcon />
-                </span>
-                <h3 className="font-heading text-lg font-600 text-on-surface">
-                  Heavy-Duty Heaters
-                </h3>
-              </div>
-              <p className="font-body text-sm leading-5 text-on-surface-variant">
-                Robust heating solutions engineered for extreme industrial
-                environments.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-lg border border-outline-variant bg-surface-container-low p-6 sm:p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="flex items-center justify-center w-9 h-9 rounded bg-primary text-on-primary">
-                <SolarIcon />
-              </span>
-              <h3 className="font-heading text-lg font-600 text-on-surface">
-                Solar Thermal
-              </h3>
-            </div>
-            <p className="font-body text-sm leading-5 text-on-surface-variant mb-6">
-              Sustainable water heating systems.
-            </p>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <div>
-                <p className="font-heading text-xl font-700 text-primary">
-                  300&deg;C
-                </p>
-                <p className="font-technical text-xs uppercase tracking-[0.05em] text-on-surface-variant">
-                  Max Temp
-                </p>
-              </div>
-              <div className="w-px self-stretch bg-outline-variant" />
-              <div>
-                <p className="font-heading text-xl font-700 text-secondary">
-                  A++
-                </p>
-                <p className="font-technical text-xs uppercase tracking-[0.05em] text-on-surface-variant">
-                  Efficiency Rating
-                </p>
-              </div>
-            </div>
-          </div>
+          <ExpertiseCard
+            title="Gas Geysers and Water Heaters"
+            description="Reliable water heating solutions for residential and commercial applications."
+            photo={productsPhoto}
+            photoAlt="Gas geyser and water heaters"
+            icon={<HeaterIcon />}
+            iconClassName="bg-tertiary text-on-tertiary"
+            details={[
+              'Dependable hot-water delivery',
+              'Residential and commercial use',
+              'Solutions tailored to each application',
+            ]}
+          />
         </div>
       </div>
     </section>
