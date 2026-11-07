@@ -19,7 +19,7 @@ function Footer() {
           />
           <p className="font-body text-sm text-on-tertiary-container max-w-xs">
             Engineering reliable, energy-efficient industrial heating
-            solutions since 2000.
+            solutions since 2001.
           </p>
         </div>
 
@@ -37,11 +37,10 @@ function Footer() {
 
         <div className="sm:col-span-2 lg:col-span-1 lg:text-right">
           <p className="font-body text-sm text-on-tertiary-container">
-            &copy; 2024 Urja Industries.
+            &copy; 2026 Urja Industries. All rights reserved.
             <br />
-            GIDC, Anand, Gujarat.
+            P.B. No. 11, Plot no.:C1-9/161-A, Fine Cast Crossing, opp. Vidhya Wires, Vithal Udyognagar, GIDC,Anand, Gujarat 388120
             <br />
-            All Rights Reserved.
           </p>
         </div>
       </div>
