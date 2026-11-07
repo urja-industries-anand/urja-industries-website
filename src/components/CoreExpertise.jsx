@@ -113,7 +113,7 @@ function CoreExpertise() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <ExpertiseCard
             title="Heat Pumps"
-            description="High-COP systems designed for large-scale commercial heating and cooling, maximizing energy recovery."
+            description="Efficient system designed for industrial and residential heating applications."
             photo={heatpumpPhoto}
             photoAlt="Industrial heat pump equipment"
             icon={<HeatPumpIcon />}
