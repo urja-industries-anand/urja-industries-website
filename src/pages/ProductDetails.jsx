@@ -105,7 +105,7 @@ const products = [
       "24/7 hot water supply",
       "No need to install separate geysers or individual gas lines for each bathroom",
       "Hot water at a pre-set temperature, 24 hours a day",
-      "No need for repeatedly firing or extinguishing the burner",
+      "50 liter to 1000 liter capacity options available",
     ],
   },
   {
@@ -117,12 +117,10 @@ const products = [
     summary:
       "A robust thermosyphon-based system that delivers efficient water heating with minimal wood.",
     features: [
-      "Engineered on the thermosyphon principle for efficient heat delivery with minimal wood",
-      "Eco-friendly water heating without electricity, gas, or fossil fuel",
-      "Zero maintenance cost",
-      "IS 2062/226 mild-steel body tank",
-      "Anti-corrosive layer that helps prevent corrosion and fungal growth",
-      "Honey-blanket glass-wool insulation retains heat for an extended period",
+    "24/7 hot water supply",
+      "No need to install separate geysers or individual gas lines for each bathroom",
+      "Hot water at a pre-set temperature, 24 hours a day",
+      "60 liter to 1000 liter capacity options available",
     ],
   },
 ];
@@ -205,12 +203,7 @@ function ProductCard({ product, onOpen }) {
               </span>
             ))}
           </span>
-          <span className="mt-auto flex items-center justify-between border-t border-on-primary/20 pt-5 font-body text-sm font-600">
-            Click for full details
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-on-primary/10">
-              <ArrowIcon />
-            </span>
-          </span>
+          
         </span>
       </span>
     </button>

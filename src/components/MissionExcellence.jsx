@@ -49,7 +49,7 @@ function MissionExcellence() {
             </h2>
           </div>
           <p className="font-body text-base leading-6 text-on-surface-variant">
-            To engineer and manufacture industrial heating equipment that
+            To engineer and manufacture domestic and industrial heating equipment that
             maximizes thermal efficiency while minimizing environmental
             impact. We are committed to providing robust, reliable solutions
             that empower industries to reduce energy consumption and
@@ -67,14 +67,14 @@ function MissionExcellence() {
             </h2>
           </div>
           <p className="font-body text-base leading-6 text-on-surface-variant mb-6">
-            From our humble beginnings in 2000, we have grown steadily by
+            From our humble beginnings in 2001, we have grown steadily by
             maintaining an unwavering focus on quality and technological
             advancement. Our journey in GIDC, Anand, reflects our dedication
             to serving the evolving needs of the industrial sector.
           </p>
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <div>
-              <p className="font-heading text-xl font-700 text-primary">2000</p>
+              <p className="font-heading text-xl font-700 text-primary">2001</p>
               <p className="font-technical text-xs uppercase tracking-[0.05em] text-on-surface-variant">
                 Founded
               </p>

@@ -16,19 +16,10 @@ function HomeHero() {
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-(--container-max) mx-auto w-full px-4 sm:px-6 lg:px-16">
           <div className="max-w-xl">
-            <span className="inline-block rounded-sm bg-primary text-on-primary px-2.5 py-1 font-technical text-xs tracking-[0.05em] uppercase mb-4 sm:mb-6">
-              Industrial Grade Solutions
-            </span>
 
-            <h1 className="font-heading text-[28px] sm:text-[36px] lg:text-[48px] font-700 leading-[36px] sm:leading-[44px] lg:leading-[56px] tracking-[-0.02em] text-inverse-on-surface mb-4 sm:mb-6">
-              Powering Efficiency through Advanced Thermal Solutions.
+            <h1 className="hero-heading-enter font-heading text-[28px] sm:text-[36px] lg:text-[48px] font-700 leading-[36px] sm:leading-[44px] lg:leading-[56px] tracking-[-0.02em] text-inverse-on-surface mb-4 sm:mb-6">
+              Powering Efficiency through Advanced Water Heating Solutions.
             </h1>
-
-            <p className="font-body text-base leading-6 text-surface-container-highest max-w-lg mb-6 sm:mb-8">
-              Engineered for reliability. Designed for sustainability. We
-              provide cutting-edge heating and cooling systems for industrial
-              and commercial applications.
-            </p>
 
             <div className="flex flex-wrap items-center gap-4">
               <Link

@@ -7,16 +7,58 @@ const footerLinks = [
   { label: 'Technical Specifications', href: '#' },
 ]
 
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="h-6 w-6"
+      aria-hidden="true"
+    >
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <circle cx="17.4" cy="6.7" r="1.1" fill="currentColor" />
+    </svg>
+  )
+}
+
 function Footer() {
   return (
     <footer className="bg-tertiary text-on-tertiary">
       <div className="max-w-(--container-max) mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-16 py-10 lg:py-12">
         <div>
-          <img
-            src={logo}
-            alt="Urja Industries"
-            className="h-9 w-auto mb-4 rounded"
-          />
+          <div className="mb-4 flex items-center gap-4">
+            <div className="relative h-16 w-36 shrink-0 overflow-hidden rounded bg-surface-container-lowest">
+              <img
+                src={logo}
+                alt="Urja Industries"
+                className="absolute top-1/2 left-1/2 w-full max-w-none -translate-x-1/2 -translate-y-1/2"
+              />
+            </div>
+            <a
+              href="https://www.instagram.com/urjaindustries/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Urja Industries on Instagram"
+              className="inline-flex rounded text-on-tertiary-container transition-colors hover:text-on-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-on-tertiary"
+            >
+              <InstagramIcon />
+            </a>
+          </div>
           <p className="font-body text-sm text-on-tertiary-container max-w-xs">
             Engineering reliable, energy-efficient industrial heating
             solutions since 2001.

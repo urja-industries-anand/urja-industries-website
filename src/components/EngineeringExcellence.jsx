@@ -2,7 +2,7 @@ import teamPhoto from '../assets/photos/team.jpeg'
 
 const pillars = [
   {
-    title: 'ISO Certified Manufacturing',
+    title: 'Quality Manufacturing',
     description:
       'Stringent quality control protocols ensure every unit meets international safety and performance standards.',
   },
@@ -57,7 +57,7 @@ function EngineeringExcellence() {
           </h2>
           <p className="font-body text-base leading-6 text-on-surface-variant mb-6 sm:mb-8">
             Since our inception, Urja Industries has been committed to
-            delivering robust, efficient, and innovative thermal solutions.
+            delivering robust, efficient, and innovative water heating solutions.
             We don&apos;t just sell equipment; we engineer reliability.
           </p>
 

@@ -1,5 +1,6 @@
 import productsPhoto from '../assets/photos/products.jpeg'
-import heatpumpPhoto from '../assets/photos/Commercial-hp.png'
+import comheatpumpPhoto from '../assets/photos/Commercial-hp.png'
+import domheatpumpPhoto from '../assets/photos/heat-pump.png'
 
 function HeatPumpIcon() {
   return (
@@ -49,7 +50,7 @@ function ExpertiseCard({
           <img
             src={photo}
             alt={photoAlt}
-            className="h-48 w-full object-cover"
+            className="h-48 w-full bg-surface-container-highest object-contain"
           />
           <div className="p-6">
             <div className="flex items-center gap-3">
@@ -112,16 +113,29 @@ function CoreExpertise() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <ExpertiseCard
-            title="Heat Pumps"
+            title="Domestic Heat Pumps"
             description="Efficient system designed for industrial and residential heating applications."
-            photo={heatpumpPhoto}
-            photoAlt="Industrial heat pump equipment"
+            photo={domheatpumpPhoto}
+            photoAlt="Domestic heat pump equipment"
             icon={<HeatPumpIcon />}
             iconClassName="bg-primary text-on-primary"
             details={[
-              'High-efficiency heat recovery',
+              'Energy efficiency up to 80%',
               'Optimized and efficient design',
-              'Scaleable upto large and complex applications',
+              '200 to 500 Litre capacity options available',
+            ]}
+          />
+          <ExpertiseCard
+            title="Commercial Heat Pumps"
+            description="Efficient system designed for industrial and residential heating applications."
+            photo={comheatpumpPhoto}
+            photoAlt="Commercial heat pump equipment"
+            icon={<HeatPumpIcon />}
+            iconClassName="bg-primary text-on-primary"
+            details={[
+              'Energy efficiency up to 80%',
+              'Optimized and efficient design',
+              '1000 to 5000 Litre capacity options available',
             ]}
           />
 

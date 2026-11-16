@@ -1,7 +1,7 @@
 const contacts = [
-  { name: 'Chirag Parekh', title: 'Managing Director', phone: '+91 98XXX XXXXX' },
-  { name: 'Darshan Patel', title: 'Managing Director', phone: '+91 98XXX XXXXX' },
-  { name: 'Chetan Mojidra', title: 'Managing Director', phone: '+91 98XXX XXXXX' },
+  { name: 'Chirag Parekh', title: 'Managing Director', phone: '+91 9825540825' },
+  { name: 'Darshan Patel', title: 'Managing Director', phone: '+91 9825540477' },
+  { name: 'Chetan Mojidra', title: 'Managing Director', phone: '+91 9825540795' },
 ]
 
 function PhoneIcon() {

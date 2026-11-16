@@ -38,11 +38,14 @@ function Header() {
   return (
     <header className="border-b border-outline-variant bg-surface-container-lowest">
       <div className="max-w-(--container-max) mx-auto flex items-center justify-between gap-4 sm:gap-6 px-4 sm:px-6 lg:px-16 py-3">
-        <Link to="/" className="shrink-0">
+        <Link
+          to="/"
+          className="relative block h-14 w-32 shrink-0 overflow-hidden sm:h-16 sm:w-36 lg:w-40"
+        >
           <img
             src={logo}
             alt="Urja Industries"
-            className="h-11 sm:h-14 lg:h-16 w-auto"
+            className="absolute top-1/2 left-1/2 w-full max-w-none -translate-x-1/2 -translate-y-1/2"
           />
         </Link>
 

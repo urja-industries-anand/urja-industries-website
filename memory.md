@@ -1,6 +1,6 @@
 # Project Memory — Urja Industries Website
 
-Last updated: 2026-11-07
+Last updated: 2026-11-16
 
 ## Project Overview
 
@@ -29,6 +29,7 @@ Urja Industries' responsive marketing website presents the company, its water-he
 - Interactive cards must work with keyboard focus as well as pointer hover.
 - Keep modal interactions accessible: provide dialog labelling, initial focus, a focus trap, Escape/backdrop closing, background scroll locking, and focus restoration.
 - Keep image `alt` text meaningful in content views and empty for decorative duplicate imagery.
+- Ensure non-essential entrance animations honor `prefers-reduced-motion`.
 
 ## Important Technical Decisions
 
@@ -37,6 +38,8 @@ Urja Industries' responsive marketing website presents the company, its water-he
 - Each product card opens a product-specific modal populated from the same product object, preventing card and popup content from diverging.
 - Product CTAs link to `/about#contact`; `ScrollToHash` handles navigation to the contact section.
 - The existing hero carousel auto-advances every four seconds, supports manual dot controls, and requires an explicitly sized parent because its slides are absolutely positioned.
+- `urjaindustries_logo.jpeg` is a square image with substantial embedded whitespace; the shared header and footer display it inside overflow-hidden crop frames so the visible mark can be enlarged without excessive layout height.
+- The verified company Instagram profile is `https://www.instagram.com/urjaindustries/`; the footer links to it as a safe external link.
 
 ## Current Implementation Status
 
@@ -44,6 +47,7 @@ Urja Industries' responsive marketing website presents the company, its water-he
 - About Us page: implemented at `/about`, including the contact section.
 - Products page: implemented at `/products` with a responsive two-column product grid, hover/focus flip cards, and separate Gas-Fired and Wood-Fired product detail dialogs.
 - Shared responsive navigation, footer, image carousel, core-expertise cards, application cards, and hash scrolling are implemented.
+- The Home hero heading has a one-time fade-and-rise entrance with a reduced-motion fallback; the footer includes enlarged branding and the company Instagram link.
 - The Product Details change was verified with `npm run build` and `npm run lint` on 2026-11-07.
 
 ## Known Issues and Technical Debt
