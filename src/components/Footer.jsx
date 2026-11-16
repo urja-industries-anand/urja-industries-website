@@ -1,4 +1,5 @@
 import logo from '../assets/photos/urjaindustries_logo.jpeg'
+import juggerSpaceLogo from '../assets/photos/jugger-space-logo.png'
 
 const footerLinks = [
   { label: 'Privacy Policy', href: '#' },
@@ -85,6 +86,24 @@ function Footer() {
             <br />
           </p>
         </div>
+      </div>
+      <div className="max-w-(--container-max) mx-auto border-t border-on-tertiary/15 px-4 py-5 sm:px-6 lg:px-16">
+        <a
+          href="https://jugger.space/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto flex w-fit items-center gap-3 rounded font-body text-sm text-on-tertiary-container transition-colors hover:text-on-tertiary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-on-tertiary"
+        >
+          <img
+            src={juggerSpaceLogo}
+            alt=""
+            className="h-10 w-10 rounded-lg object-cover"
+          />
+          <span>
+            Created with love ❤️ by{' '}
+            <span className="font-600">jugger.space</span>
+          </span>
+        </a>
       </div>
     </footer>
   )
